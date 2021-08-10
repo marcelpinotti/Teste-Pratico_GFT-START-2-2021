@@ -40,30 +40,26 @@ public class Jogador {
     }
 
     public long calcularIdade(){
-        long anos = ChronoUnit.DAYS.between(LocalDate.now(), nascimento);
+        long anos = ChronoUnit.YEARS.between(nascimento, LocalDate.now());
         return anos;
     }
 
-    public String aposentar(String posicao) {
-        long anos = ChronoUnit.DAYS.between(LocalDate.now(), nascimento);
+    public String aposentar() {
+        long anos = ChronoUnit.YEARS.between(nascimento, LocalDate.now());
 
-        if (anos >= 40 && posicao == "defesa") {
-            System.out.println("Jogar Aposentado.");
+        final String aposentado;
+
+        if (anos >= 40 && getPosicao() == "defesa") {
+            aposentado = "Jogador aposentado";
+        }else if (anos >= 38 && getPosicao() == "meio-campo") {
+            aposentado = "Jogador aposentado";
+        }else if (anos >= 35 && getPosicao() == "atacante") {
+            aposentado = "Jogador aposentado";
         } else {
-            System.out.println(" Jogador na Ativa");
+            aposentado = " Jogador na Ativa";
         }
 
-        if (anos >= 38 && posicao == "meio-campo") {
-            System.out.println("Jogar Aposentado.");
-        } else {
-            System.out.println(" Jogador na Ativa");
-        }
-
-        if (anos >= 35 && posicao == "atacante") {
-            System.out.println("Jogar Aposentado.");
-        } else {
-            System.out.println(" Jogador na Ativa");
-        }
+        return aposentado;
     }
 
     @Override
@@ -72,6 +68,7 @@ public class Jogador {
                 "nome = " + nome + '\'' +
                 ", posicao = " + posicao + '\'' +
                 ", nascimento = " + nascimento +
-                '}';
+                ", idade = " + calcularIdade() + "anos" +
+                ", aposentado = " + aposentar();
     }
 }
