@@ -1,10 +1,10 @@
-<h2>Exercícios Resolvido do Teste Prático da GFT START #2 2021</h2>
+<h2>Exercícios Resolvidos do Teste Prático da GFT START #2 2021</h2>
 
 
 
 <h6>- Minha experiência</h6>
 
-​	***O desafio foi demais!*** Nunca havia passado por uma experiência como essa, você codificando com tempo programado ( 2 horas para terminar o desafio ), o nervosismo a flor da pele. 
+​	***O desafio foi demais!*** Nunca havia passado por uma experiência como essa, você codificando com tempo programado ( 2 horas para terminar o desafio ), e o nervosismo a flor da pele. 
 
 ​	De tudo o que eu passei fica o aprendizado, refatorei os códigos e finalizei o que precisava.
 
